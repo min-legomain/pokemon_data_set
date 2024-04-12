@@ -1,6 +1,9 @@
-require './pokemon_parser/parser.rb'
+require './parser/pokemon_parser/pokemon_parser'
+require './parser/move_parser/move_parser'
+
 def excute
-  Parser.new.parse('../data/orig/from.json')
+  PokemonParser.new.parse('./data/orig/csv/ポケモンデータシート.csv')
+  MoveParser.new.parse('./data/orig/csv/技データリスト.csv')
 end
 
 excute
